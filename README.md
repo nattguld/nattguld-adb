@@ -9,7 +9,7 @@ And optionally the nattguld-data library: https://github.com/nattguld/nattguld-d
 This is used for saving configurations and can be easily stripped out.
 
 ## Notes
-Make sure you have turned on USB debugging on your device!
+Make sure you have turned on USB debugging on your device!  
 The currently included ADB actions are tested for android version 5.1.0 to 6.0.1
 
 ## Example Usage
