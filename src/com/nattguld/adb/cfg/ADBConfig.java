@@ -1,17 +1,14 @@
 package com.nattguld.adb.cfg;
 
-import com.nattguld.data.cfg.Config;
-import com.nattguld.data.cfg.ConfigManager;
-import com.nattguld.data.json.JsonReader;
-import com.nattguld.data.json.JsonWriter;
-
 /**
  * 
  * @author randqm
  *
  */
 
-public class ADBConfig extends Config {
+public class ADBConfig {
+	
+	private static ADBConfig singleton;
 	
 	/**
 	 * The SDK tools path.
@@ -19,7 +16,7 @@ public class ADBConfig extends Config {
 	private String sdkToolsPath;
 	
 
-
+/*
 	@Override
 	protected void read(JsonReader reader) {
 		this.sdkToolsPath = reader.getAsString("sdk_tools_path", null);
@@ -33,7 +30,7 @@ public class ADBConfig extends Config {
 	@Override
 	protected String getSaveFileName() {
 		return ".adb_config";
-	}
+	}*/
 	
 	/**
 	 * Modifies the SDK tools path.
@@ -62,7 +59,10 @@ public class ADBConfig extends Config {
 	 * @return The config.
 	 */
 	public static ADBConfig getConfig() {
-		return (ADBConfig)ConfigManager.getConfig(new ADBConfig());
+		if (singleton == null) {
+			singleton = new ADBConfig();
+		}
+		return singleton;
 	}
  
 }

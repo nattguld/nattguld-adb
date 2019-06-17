@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.List;
 
+import com.nattguld.adb.actions.ADBAction;
 import com.nattguld.adb.cfg.ADBConfig;
 
 /**
@@ -16,6 +17,17 @@ import com.nattguld.adb.cfg.ADBConfig;
 
 public class Dispatcher {
 
+	
+	/**
+	 * Sends an ADB action.
+	 * 
+	 * @param action the action.
+	 * 
+	 * @return The result.
+	 */
+	public static boolean sendAction(ADBAction action) {
+		return action.execute();
+	}
 	
 	/**
 	 * Sends a command to the connected devices.
