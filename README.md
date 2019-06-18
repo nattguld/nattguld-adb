@@ -9,7 +9,8 @@ And optionally the nattguld-data library: https://github.com/nattguld/nattguld-d
 This is used for saving configurations and can be easily stripped out.
 
 ## Notes
-The currently included ADB actions are meant for android version 5.1.0 to 6.0.1
+Make sure you have turned on USB debugging on your device!  
+The currently included ADB actions are tested for android version 5.1.0 to 6.0.1
 
 ## Example Usage
 You can send straight up plane text commands or use ADB actions. There's a few ADB actions present but you will want to extend with the ones you need yourself. The difference is that an ADB action will execute multiple commands to handle an action rather than a single line command.
