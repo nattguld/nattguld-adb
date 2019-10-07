@@ -45,6 +45,15 @@ public class ADBConfig extends Config {
 	}
 	
 	/**
+	 * Retrieves whether ADB is setup or not.
+	 * 
+	 * @return The result.
+	 */
+	public boolean isSetup() {
+		return Objects.nonNull(getSDKToolsPath());
+	}
+	
+	/**
 	 * Modifies the SDK tools path.
 	 * 
 	 * @param sdkToolsPath The new path.
